@@ -30,7 +30,7 @@
 struct  WHand {
           struct WHand far *LastWind;
           byte         far *Ptr;
-          byte X1,Y1,X2,Y2;
+          word X1,Y1,X2,Y2;
           byte SelectWind;
         } extern far *NWP,far *AWP;
 

@@ -240,8 +240,9 @@ word near ReadDirs(char *Drive,char *Direc)
 
 void near SortDir(void)
 {
-    if (DirC)    qsort (DirList,DirC-AuxDirC,sizeof (DirList[0]),strcmp);
-    if (AuxDirC) qsort (DirList+(DirC-AuxDirC),AuxDirC,sizeof(DirList[0]),strcmp);
+    typedef int (_fcmp_t)(const void *, const void *);
+    if (DirC)    qsort (DirList,DirC-AuxDirC,sizeof (DirList[0]),(_fcmp_t*)strcmp);
+    if (AuxDirC) qsort (DirList+(DirC-AuxDirC),AuxDirC,sizeof(DirList[0]),(_fcmp_t*)strcmp);
 }
 
 word GF_HX,GF_X;

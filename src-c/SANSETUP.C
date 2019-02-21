@@ -365,9 +365,9 @@ word MakeSANVIDEODRV(void)
                ExplainList=PaperLimit;
                HOpenWindow(17,16,43,20);
                HOpenMenu();
-               HSetItem(18,17," 竍大 燼攚 1  :",13,'');
-               HSetItem(18,18," 竍大 燼攚 2  :",13,'');
-               HSetItem(18,19," 竍大 燼攚 3  :",13,'');
+               HSetItem(18,17," 竍大 燼攚 1  :",13,' ');
+               HSetItem(18,18," 竍大 燼攚 2  :",13,' ');
+               HSetItem(18,19," 竍大 燼攚 3  :",13,' ');
                do {
                   sprintf(One,"%4u",MaxPaper1);DrawString(34,17,One);
                   sprintf(Two,"%4u",MaxPaper2);DrawString(34,18,Two);
@@ -659,7 +659,7 @@ void OptionMenu(void)
        HSetItem(17,16," L 燼攚 莂嫛",13,'L');
        HDrawBar(17,35,17);
        HSetItem(17,18," S 雅墂 羔竪",13,'S');
-       HSetItem(17,19,"   竍大 燼帽",13,'');
+       HSetItem(17,19,"   竍大 燼帽",13,' ');
     HManualSelect(OptionN);
 
     do {
